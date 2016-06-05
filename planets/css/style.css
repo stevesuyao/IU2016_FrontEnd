@@ -1,0 +1,250 @@
+html {
+  background: #010101;
+  overflow: hidden;
+}
+
+
+/*r-n classes specify rotations per minute Up to 10 rotations per minute*/
+
+@keyframes rotate {
+  from {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-neg {
+  from {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    width: 5px;
+    height: 5px;
+    opacity: 1;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background: #51CDF3;
+  }
+  to {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    background: #fff;
+  }
+}
+
+@keyframes sun-effect {
+  from {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1) inset, 0 0 30px #FFBA54;
+  }
+  to {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) inset, 0 0 30px #FFF254;
+  }
+}
+
+@keyframes shiftbg {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 600% 0%;
+  }
+}
+
+.shiftbg {
+  animation: shiftbg linear 2s infinite;
+  -webkit-animation: shiftbg linear 2s infinite;
+}
+
+#system {
+  left: 50%;
+  top: 50%;
+  border-radius: 40px;
+  position: absolute;
+}
+
+.bg-star {
+  background: #fff;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  z-index: -2;
+}
+
+.star {
+  background: #FFB819;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  border-radius: 40px;
+  animation: sun-effect linear 3s infinite alternate;
+  z-index: 10000;
+}
+
+.planet {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+
+}
+
+.satellite {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+}
+
+.asteroid {
+  top:50%;
+  left: 50%;
+  width:2px;
+  height:2px;
+}
+
+.planet > div {
+  position: absolute;
+}
+
+.earth {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAABL1BMVEUse/8yy0syy3YjYcwpcu0kZNIsev4mad0pcu4sffsvpp4yyU8jYsojYs0kZdMnbeMohKEse/4sfP0rmoYtqXcjY8kkZdQmat0ohKIoh54sffwulcQtqHUvprUwr4owsYYwvF0wvlsxwGQxwWEyyU4jZMwjZckkZNEnbOEnbOIpc+4oh58oiJ4snoIsn4EwvWEwv1kwwFkxv10yxlMxwYcyyXkjYssjY8oohK8ohLAoh60rmp0ulMYulcUulsIulsMumL4umL8uldIultEumM4tqJItqZQwr6YwsaMxvmcxwWIxwl8wvIIxw14wvoEyx1MyyVAxwIkyyXgjZM0jZcsoh64oiK4snposn5oulNMuldMwvYUwv38wwH8xv4MxvosxwoUxw4Uyxnwyx3wyyXqcooOsAAACD0lEQVR42u3Zx1bDMBCFYVtjO4ZAnITQQg2919A7hN5777z/M7DDh6bRaHQ4LPS/wLfw5o7luN9LOsTGXXk/IWNUZFgDyVGRnAYyQEX66choFxXpHCEjaZ+K1KSpSBUkqEgtVNGQoQrwqIgHFYMEpLUOoDugIoEPUNeqhHQUGuurASB0yIUAUF3fWOj4BYGvRY5GEcj6hvRkdJBMLwFJhY5mfSklpNJPeIGjXeAl/MpfENt/r2yxeSfpEjrcbl4qoxnzba5GbQsEIlvualaeVUZig66oGg0uowbFb77LQfbVvv6Ky2pZCWnhIS1KSDsPaVdCjnhIkjFoDSPDPGSMP2jxcvxBizfAHrR4o13sQYuX9omDFg8d0PigxUMHND5o8fABjQ9aNMaAjkC7iD1o8XoyzEGLlwoZgxYrHtA2m42f+Oj1cXMt76iUX9ssTgj1HPGp4xsF4/pYxBGQuKYsQmSbhNBFYgVBYoOBiFWpsSqMIM952Td/MoOIkgQpCUPIlgTZMoUUJUjRFDIhQd7+AnkxhTxIkFtTyIYE2TCFXEiQc0PI/ZkEOb0zg0z7sitm2ggyBwnpFTNnALmaBE96xUxecpG9GeTUCHyAmT195ORgfXYKAEL0ipmaXT84oSDkUyMCNP6/+kwvF0mF/CsG/1fPvGLsv3qbzT6l2KcU+5Rin1LsU4p9SrFPKSaeUt4BbWlILXJ0JzcAAAAASUVORK5CYII=) 0% 0% repeat-x;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 180px;
+  margin-left: -25px;
+  background-size: 120% 120%;
+}
+
+.mars {
+  background: #ff6633;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+ /* margin-top: 90px;*/
+  margin-left: -10px;
+}
+
+.moon {
+  background: gray;
+  width: 15px;
+  height: 15px;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+.mars .satellite:nth-child(1) .moon {
+  margin-top: 25px;
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+}
+
+.mars .satellite:nth-child(2) .moon {
+  margin-top: 15px;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+}
+
+.comet {
+  background: #51CDF3;
+  width: 15px;
+  height: 5px;
+  border-radius: 5px 0 10px 5px;
+  margin-top: 290px;
+}
+
+.comet-trail {
+  animation-name: fade-out;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1 !important;
+  background: #fff;
+  height: 2px;
+  width: 2px;
+  position: absolute;
+  opacity: 0;
+}
+
+div[class*="r-"] {
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+div[class*="r-neg"] {
+  animation-name: rotate-neg !important;
+}
+
+.r-1 {
+  animation-duration: 60s;
+}
+
+.r-2 {
+  animation-duration: 30s;
+}
+
+.r-3 {
+  animation-duration: 20s;
+}
+
+.r-4 {
+  animation-duration: 15s;
+}
+
+.r-5 {
+  animation-duration: 12s;
+}
+
+.r-6 {
+  animation-duration: 10s;
+}
+
+.r-7 {
+  animation-duration: 8.5714285s;
+}
+
+.r-8 {
+  animation-duration: 7.5s;
+}
+
+.r-9 {
+  animation-duration: 6.6666666s;
+}
+
+.r-10 {
+  animation-duration: 6s;
+}
+
+
+/* .d-n classes are for offsetting the planets and other cosmic bodies. n = 10px*n */
+
+.d-1 {
+  margin-top: 10px;
+}
