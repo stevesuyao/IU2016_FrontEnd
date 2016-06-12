@@ -1,0 +1,161 @@
+body
+{  /*I added this. Hope it works.*/
+	overflow: hidden;
+	background-image: url('img/background.png');
+}
+
+body.mainpage
+{ /*I added this. Hope it works.*/
+	font: 12px Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+#frame {
+	position: relative;
+	width: 700px;
+	height: 300px;
+	margin: 0 auto;
+}
+#inside-frame {
+	position: relative;
+	width: 600px;
+	height: 180px;
+	background-color: #34650F;
+	padding-top: 50px;
+	border-radius: 20px;
+	margin-top: -248px;
+	margin-left: 47px;
+	border: 2px solid;
+}
+#navDiv1 {
+	position: relative;
+	width: 600px;
+	height: 30px;
+	margin: auto;
+}
+.navDiv2frame {
+	position: relative;
+	width: 600px;
+	height: 140px;
+	margin: auto;
+}
+.navDiv2left {
+	position: relative;
+	width: 100px;
+	height: 140px;
+	float: left;
+}
+.navDiv2center {
+	position: relative;
+	width: 400px;
+	height: 140px;
+	float: left;
+}
+.navDiv2right {
+	position: relative;
+	width: 100px;
+	height: 140px;
+	float: right;
+}
+#navDiv3frame {
+	position: relative;
+	width: 600px;
+	height: 30px;
+	margin: auto;
+}
+#navDiv3left {
+	position: relative;
+	width: 50px;
+	height: 30px;
+	float: left;
+	background-image: url(../sources/nav_blank.png);
+}
+#navDiv3center {
+	position: relative;
+	width: 500px;
+	height: 30px;
+	float: left;
+}
+#navDiv3right {
+	position: relative;
+	width: 50px;
+	height: 30px;
+	float: right;
+	background-image: url(../sources/nav_blank.png);
+}
+.nav-arrow {
+    cursor: pointer;
+}
+#menu {
+    font: 15px verdana, arial,sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    background-image: url(../sources/nav_blank.png);
+    width: 100%;
+    height: 100%;
+}
+#menu li {
+    float: left;
+    width: 11%;
+	color: #FFF;
+}
+#menu li a {
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    display: block;
+	color: #FFF;
+}
+#menu_mainpage_2 {
+    font: 15px verdana, arial,sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    background-image: url(../sources/nav_blank.png);
+    width: 100%;
+    height: 100%;
+}
+#menu_mainpage_2 li {
+    float: left;
+    width: 30%;
+}
+#menu_mainpage_2 li a {
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    display: block;
+}
+.label-links
+{
+	cursor: pointer;
+	color: white;
+}
+#navDiv2center-bio
+{
+	background-color: #34650F;
+}
+#label-center-bio
+{
+	color: white;
+	font-size: 20px;
+}
+#navDiv2center-pro
+{
+	background-color: #34650F;
+}
+#opening-bar
+{
+	cursor: pointer;
+}
+
+#cross-hairs
+{   /*I added this. Hope it works.*/
+	pointer-events: none;
+	position: absolute;
+	margin-left: -8.5%;
+	margin-top: -9%;
+	height: 200px;
+	width: 200px;
+}
