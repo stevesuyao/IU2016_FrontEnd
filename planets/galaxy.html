@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Planets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+  <div id='galaxy_container'></div>
+
+    <div id="system_container"></div>
+    <div class="stars-bg"></div>
+
+    <input type="submit" id='btn_back' value="BACK">
+
+  <!-- All main, star-orbiting planets are top-level in the system div and are centered around the star element 
+  <div class="star"></div>
+ 
+  <div class="planet  r-neg">
+    <div class="mars"></div>
+
+  </div>
+
+    <div class="planet  r-neg">
+    <div class="mars"></div>
+
+  </div>-->
+
+
+
+</div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src="../IU.js"></script>
+
+        <script>
+          var app = new IU.App();
+          app.init($('#galaxy_container'),$('#system_container'),$('#btn_back'));
+          console.log(app);
+
+          app.drawUniverseBackground('.stars-bg');
+          app.getGalaxies(function(){app.drawGalaxies()});//
+
+          $(window).resize(function(){app.drawUniverseBackground('.stars-bg')});
+          
+          $('.galaxy').click(function(e){console.log(e.target)})
+
+        </script>
+
+    
+    
+    
+  </body>
+</html>

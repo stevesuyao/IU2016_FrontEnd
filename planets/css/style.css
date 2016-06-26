@@ -1,12 +1,12 @@
 html {
   background: #010101;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 
 /*r-n classes specify rotations per minute Up to 10 rotations per minute*/
 
-@keyframes rotate {
+@keyframes rotate1 {
   from {
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -16,6 +16,138 @@ html {
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+@keyframes rotate2 {
+  from {
+    -ms-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  to {
+    -ms-transform: rotate(390deg);
+    -webkit-transform: rotate(390deg);
+    transform: rotate(390deg);
+  }
+}
+@keyframes rotate6 {
+  from {
+    -ms-transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+  }
+  to {
+    -ms-transform: rotate(420deg);
+    -webkit-transform: rotate(420deg);
+    transform: rotate(420deg);
+  }
+}
+@keyframes rotate4 {
+  from {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  to {
+    -ms-transform: rotate(450deg);
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+@keyframes rotate5 {
+  from {
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+  to {
+    -ms-transform: rotate(330deg);
+    -webkit-transform: rotate(330deg);
+    transform: rotate(330deg);
+  }
+}
+@keyframes rotate3 {
+  from {
+    -ms-transform: rotate(150deg);
+    -webkit-transform: rotate(150deg);
+    transform: rotate(150deg);
+  }
+  to {
+    -ms-transform: rotate(510deg);
+    -webkit-transform: rotate(510deg);
+    transform: rotate(510deg);
+  }
+}
+@keyframes rotate7 {
+  from {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  to {
+    -ms-transform: rotate(540deg);
+    -webkit-transform: rotate(540deg);
+    transform: rotate(540deg);
+  }
+}
+@keyframes rotate8 {
+  from {
+    -ms-transform: rotate(210deg);
+    -webkit-transform: rotate(210deg);
+    transform: rotate(210deg);
+  }
+  to {
+    -ms-transform: rotate(570deg);
+    -webkit-transform: rotate(570deg);
+    transform: rotate(570deg);
+  }
+}
+@keyframes rotate9 {
+  from {
+    -ms-transform: rotate(240deg);
+    -webkit-transform: rotate(240deg);
+    transform: rotate(240deg);
+  }
+  to {
+    -ms-transform: rotate(600deg);
+    -webkit-transform: rotate(600deg);
+    transform: rotate(600deg);
+  }
+}
+@keyframes rotate10 {
+  from {
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  to {
+    -ms-transform: rotate(630deg);
+    -webkit-transform: rotate(630deg);
+    transform: rotate(630deg);
+  }
+}
+@keyframes rotate11 {
+  from {
+    -ms-transform: rotate(300deg);
+    -webkit-transform: rotate(300deg);
+    transform: rotate(300deg);
+  }
+  to {
+    -ms-transform: rotate(660deg);
+    -webkit-transform: rotate(660deg);
+    transform: rotate(660deg);
+  }
+}
+@keyframes rotate12 {
+  from {
+    -ms-transform: rotate(330deg);
+    -webkit-transform: rotate(330deg);
+    transform: rotate(330deg);
+  }
+  to {
+    -ms-transform: rotate(690deg);
+    -webkit-transform: rotate(690deg);
+    transform: rotate(690deg);
   }
 }
 
@@ -76,39 +208,132 @@ html {
   -webkit-animation: shiftbg linear 2s infinite;
 }
 
-#system {
-  left: 50%;
-  top: 50%;
-  border-radius: 40px;
-  position: absolute;
+#galaxy_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
+
+#system_container{
+    position: absolute;
+    width: 200%;
+    height: 100%;
+}
+
+.galaxy{
+    position: absolute;
+    /*border-radius: 50%;*/
+    z-index: 10000;
+    background-size: 100% 100%;
+}
+
+.galaxy:hover{
+
+  cursor: crosshair;
+}
+
+.galaxy[data-id="1"]{
+  background-image: url("../images/galaxy-0.png");
+  width: 220px;
+  height: 150px;
+  left: 5%;
+  top: 10%;
+}
+
+.galaxy[data-id="2"]{
+background-image: url("../images/galaxy-1.png");
+width: 300px;
+height: 200px;
+left: 20%;
+top: 60%;
+}
+
+.galaxy[data-id="3"]{
+background-image: url("../images/galaxy-2.png");
+width: 380px;
+height: 150px;
+left: 60%;
+top: 30%;
+
+}
+
 
 .bg-star {
   background: #fff;
-  width: 1px;
-  height: 1px;
+  width: 4px;
+  height: 4px;
   position: absolute;
   z-index: -2;
+  border-radius: 50%;
 }
 
 .star {
   background: #FFB819;
+  /*background-image: url("../images/1.gif");*/
   position: absolute;
   width: 80px;
   height: 80px;
-  top: 50%;
-  left: 50%;
+ /* top: 50%;
+  left: 50%;*/
   margin-left: -40px;
   margin-top: -40px;
   border-radius: 40px;
   animation: sun-effect linear 3s infinite alternate;
   z-index: 10000;
+  /*box-shadow: inset -10px -5px 0px #bf9e3f;*/
 }
 
-.planet {
+/*.star {
+  background: #C25447;
+  box-shadow: inset -30px -30px 0px #bf4d3f;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.star:before {
+     content: '';
+    background: rgba(180, 72, 60, 0.12);
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 15px 15px;
+}
+.star:after {
+  content: '';
+    background: rgba(184, 74, 61, 0.16);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: -20px 40px;
+}*/
+
+.star[data-id="1"], .star[data-id="4"],.star[data-id="7"]{
+  top: 50%;
+    left: 20%;
+
+}
+
+.star[data-id="2"], .star[data-id="5"],.star[data-id="8"]{
+  top: 50%;
+    left: 50%;
+  
+}
+
+.star[data-id="3"],.star[data-id="6"],.star[data-id="9"]{
+
+  top: 50%;
+    left: 80%;
+}
+
+.planet-c {
   width: 2px;
   height: 2px;
   background: transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 
 }
 
@@ -128,7 +353,7 @@ html {
   height:2px;
 }
 
-.planet > div {
+.planet-c > div {
   position: absolute;
 }
 
@@ -142,13 +367,14 @@ html {
   background-size: 120% 120%;
 }
 
-.mars {
-  background: #ff6633;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
- /* margin-top: 90px;*/
-  margin-left: -10px;
+.planet {
+    background: #a3a3a3;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: inset -5px -1px 0px rgba(89, 87, 83, 0.62);
+    cursor: crosshair;
+
 }
 
 .moon {
@@ -192,11 +418,11 @@ html {
   opacity: 0;
 }
 
-div[class*="r-"] {
+/*div[class*="r-"] {
   animation-name: rotate;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
+}*/
 
 div[class*="r-neg"] {
   animation-name: rotate-neg !important;
@@ -204,42 +430,86 @@ div[class*="r-neg"] {
 
 .r-1 {
   animation-duration: 60s;
+  animation-name: rotate1;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .r-2 {
-  animation-duration: 30s;
+  animation-duration: 55s;
+  animation-name: rotate2;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .r-3 {
-  animation-duration: 20s;
+  animation-duration: 46s;
+  animation-name: rotate3;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .r-4 {
-  animation-duration: 15s;
+  animation-duration: 42s;
+  animation-name: rotate4;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .r-5 {
-  animation-duration: 12s;
+  animation-duration: 38s;
+  animation-name: rotate5;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .r-6 {
-  animation-duration: 10s;
+  animation-duration: 32s;
+  animation-name: rotate6;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .r-7 {
-  animation-duration: 8.5714285s;
+  animation-duration: 25s;
+    animation-name: rotate7;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .r-8 {
-  animation-duration: 7.5s;
+  animation-duration: 20s;
+    animation-name: rotate8;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .r-9 {
-  animation-duration: 6.6666666s;
+  animation-duration: 51s;
+    animation-name: rotate9;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .r-10 {
-  animation-duration: 6s;
+  animation-duration: 34s;
+    animation-name: rotate10;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.r-11 {
+  animation-duration: 62s;
+    animation-name: rotate11;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.r-12 {
+  animation-duration: 49s;
+    animation-name: rotate12;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 
@@ -247,4 +517,13 @@ div[class*="r-neg"] {
 
 .d-1 {
   margin-top: 10px;
+}
+
+
+#btn_back{
+   display: none;
+   position:fixed;
+   bottom:10px;
+   left:10px;
+
 }
